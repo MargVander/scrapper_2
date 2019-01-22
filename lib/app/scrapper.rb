@@ -54,7 +54,7 @@ class Scrapper
 
 	def save_as_spreadsheet
 		i = 1
-		session = GoogleDrive::Session.from_config("config.json")
+		session = GoogleDrive::Session.from_config(".config.json")
 		ws = session.spreadsheet_by_key("1VpKH2P5HUAmQBFC_dtxkDvb3aHOJ8NI5qPA5wrbT924").worksheets[0]
 		@mairie.map do |hash|
 			hash.select do |key, value|
